@@ -10,7 +10,8 @@ test("Greet renders correctly", () => {
   expect(textElement).toBeInTheDocument();
 });
 
-test("Greet renders with name", () => {
+//test.skip() can also be used
+test.only("Greet renders with name", () => {
   render(<Greet name="Kimmie" />);
   const textElement = screen.getByText("Hello Kimmie");
   expect(textElement).toBeInTheDocument();
