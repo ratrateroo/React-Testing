@@ -3,6 +3,10 @@
 import { render, screen } from "@testing-library/react";
 import { Greet } from "./greet";
 
+//describe.only()
+//describe.skip()
+//multiple describe function is also allowed
+//one file is one test suite
 describe("Greet", () => {
   test("renders correctly", () => {
     render(<Greet />);
@@ -12,9 +16,12 @@ describe("Greet", () => {
   });
 
   //test.skip() can also be used
-  test.only("renders with name", () => {
-    render(<Greet name="Kimmie" />);
-    const textElement = screen.getByText("Hello Kimmie");
-    expect(textElement).toBeInTheDocument();
+  //describe function can also be nested
+  describe("Nested", () => {
+    test.only("renders with name", () => {
+      render(<Greet name="Kimmie" />);
+      const textElement = screen.getByText("Hello Kimmie");
+      expect(textElement).toBeInTheDocument();
+    });
   });
 });
