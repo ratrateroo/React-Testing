@@ -8,10 +8,10 @@ import { Greet } from "./greet";
 //multiple describe function is also allowed
 //one file is one test suite
 describe("Greet", () => {
-  fit("renders correctly", () => {
+  test("renders correctly", () => {
     render(<Greet />);
     //const textElement = screen.getByText(/hello/i);
-    const textElement = screen.getByText("Hello");
+    const textElement = screen.getByText(/Hello/i);
     expect(textElement).toBeInTheDocument();
   });
 
