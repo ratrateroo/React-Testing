@@ -32,4 +32,6 @@ RTL Queries
             example: const nameElement = screen.getByLabelText("Name", {selector:"input"})
 
     3. getByPlaceholderText
-            example: const nameElement = screen.getByPlaceholderText('Fullname")
+            example: const nameElement = screen.getByPlaceholderText("Fullname")
+    4. getByText
+            example: const nameElement = screen.getByText("Welcome Guest")
