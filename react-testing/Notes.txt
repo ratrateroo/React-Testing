@@ -35,3 +35,5 @@ RTL Queries
             example: const nameElement = screen.getByPlaceholderText("Fullname")
     4. getByText
             example: const nameElement = screen.getByText("Welcome Guest")
+    4. getByDisplayValue
+                example: const nameElement = screen.getByDisplayValue("Username")
