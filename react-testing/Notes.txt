@@ -28,7 +28,7 @@ RTL Queries
             
             To use an achor element as a button in the navbar, you can add role='button'
     
-    2. getByLabel
+    2. getByLabelText
             example: const nameElement = screen.getByLabelText("Name", {selector:"input"})
 
     3. getByPlaceholderText
@@ -37,3 +37,15 @@ RTL Queries
             example: const nameElement = screen.getByText("Welcome Guest")
     4. getByDisplayValue
                 example: const nameElement = screen.getByDisplayValue("Username")
+
+
+    Priority Order for Queries
+
+    1. getByRole
+    2. getByLabelText
+    3. getByPlaceholderText
+    4. getByText
+    5. getByDisplayValue
+    6. getByAltText
+    7. getByTitle
+    8. getByTestId
