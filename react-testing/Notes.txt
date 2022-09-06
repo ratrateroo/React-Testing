@@ -49,3 +49,18 @@ RTL Queries
     6. getByAltText
     7. getByTitle
     8. getByTestId
+
+    getAllBy Queries
+
+    1. getAllByRole
+        example:
+            const listItemElements = screen.getAllByRole('listitem')
+            expect(listItemElements).toHaveLength(3)
+    2. getAllByLabelText
+    3. getAllByPlaceholderText
+    4. getAllByText
+    5. getAllByDisplayValue
+    6. getAllByAltText
+    7. getAllByTitle
+    8. getAllByTestId
+
