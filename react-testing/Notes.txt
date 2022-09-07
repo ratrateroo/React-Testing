@@ -64,3 +64,21 @@ RTL Queries
     7. getAllByTitle
     8. getAllByTestId
 
+
+
+    TextMatch - string
+
+    screen.getByText('Hello World') //full string match
+    screen.getByText('llo Worl',{exact:false}) //substring match
+    screen.getByText('hello world',{exact:false}) //ignore case
+
+    TextMatch - regex
+
+    screen.getByText(/World/) //substring match 
+    screen.getByText(/world/i) //substring match, ignore case
+    screen.getByText(/^hello world$/i) //full string match, ignore case
+
+
+
+
+
