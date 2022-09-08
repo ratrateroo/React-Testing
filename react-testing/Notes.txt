@@ -79,6 +79,14 @@ RTL Queries
     screen.getByText(/^hello world$/i) //full string match, ignore case
 
 
+    TextMatch - custom function
+
+    (content?: string, element?: Element | null) => boolean
+
+    screen.getByText((content) => content.startsWith('Hello'))
+
+
+
 
 
 
