@@ -99,6 +99,13 @@ RTL Queries
 
 
 
-
+    1. queryAllByRole
+    2. queryAllByLabelText
+    3. queryAllByPlaceholderText
+    4. queryAllByText
+    5. queryAllByDisplayValue
+    6. queryAllByAltText
+    7. queryAllByTitle
+    8. queryAllByTestId
 
 
