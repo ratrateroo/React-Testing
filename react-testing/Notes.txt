@@ -109,3 +109,18 @@ RTL Queries
     8. queryAllByTestId
 
 
+    findBy and findAllBy
+
+    findBy
+        Returns a Promise which resolves when an element is found which matches the given query
+        The promise is rejected if no element is found or if more than one element is found after a default timeout of 1000ms
+
+    findAllBy
+        Returns a promise which resolves to an array of elements when any elements are found which match the given query
+        The promise is rejected if no elements are found after a default timeout of 1000ms
+
+    test('start button displayed eventually after some time', async ()=>{
+        render(<App/>);
+        const startButton await screen.findByRose("button",{name:"starting button"},{timeout:2000});
+    })
+    
