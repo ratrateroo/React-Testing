@@ -124,3 +124,10 @@ RTL Queries
         const startButton await screen.findByRose("button",{name:"starting button"},{timeout:2000});
     })
     
+
+    Manual Queries
+
+        Manual queries - you can use regular querySelector DOM API to find elements
+        
+        const {container} render(<MyComponent/>)
+        const foo = container.querySelector('[data-foo="bar"]')
