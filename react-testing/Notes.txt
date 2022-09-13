@@ -115,9 +115,27 @@ RTL Queries
         Returns a Promise which resolves when an element is found which matches the given query
         The promise is rejected if no element is found or if more than one element is found after a default timeout of 1000ms
 
+    1. findByRole
+    2. findByLabelText
+    3. findByPlaceholderText
+    4. findByText
+    5. findByDisplayValue
+    6. findByAltText
+    7. findByTitle
+    8. findByTestId
+
     findAllBy
         Returns a promise which resolves to an array of elements when any elements are found which match the given query
         The promise is rejected if no elements are found after a default timeout of 1000ms
+
+    1. findAllByRole
+    2. findAllByLabelText
+    3. findAllByPlaceholderText
+    4. findAllByText
+    5. findAllByDisplayValue
+    6. findAllByAltText
+    7. findAllByTitle
+    8. findAllByTestId
 
     test('start button displayed eventually after some time', async ()=>{
         render(<App/>);
