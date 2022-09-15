@@ -41,32 +41,45 @@ console.log(totalPrice);
 //(props.selectedData.length === 1 && props.selectedData.proficiencyCode===3)
 
 const dummyData = [
+  { proficiencyCode: "3" },
   { proficiencyCode: "1" },
-  { proficiencyCode: "2" },
   // { proficiencyCode: "1" },
 ];
 
-const lastOneLanguage = (data: typeof dummyData) => {
+const lastOneLanguage = (data: typeof lang) => {
   if (!(data.length === 1 && data[0].proficiencyCode === "3")) {
     return false;
   }
   return true;
 };
 
-const lastTwoLanguages = (data: typeof dummyData) => {
+const lastTwoLanguages = (data: typeof lang) => {
   if (data.length === 2) {
-    if (data[0].proficiencyCode === "1" && data[1].proficiencyCode === "2") {
+    if (
+      data[0].proficiencyCode === "1" &&
+      (data[1].proficiencyCode === "2" || data[1].proficiencyCode === "3")
+    ) {
       return true;
     }
-    if (data[0].proficiencyCode === "2" && data[1].proficiencyCode === "1") {
+    if (
+      data[0].proficiencyCode === "2" &&
+      (data[1].proficiencyCode === "1" || data[1].proficiencyCode === "3")
+    ) {
+      return true;
+    }
+
+    if (
+      data[0].proficiencyCode === "3" &&
+      (data[1].proficiencyCode === "1" || data[1].proficiencyCode === "2")
+    ) {
       return true;
     }
   }
   return false;
 };
 
-console.log(lastOneLanguage(dummyData));
-console.log(lastTwoLanguages(dummyData));
+console.log(lastOneLanguage(lang));
+console.log(lastTwoLanguages(lang));
 
 // ||
 // 2 language, 1 proficiency each
