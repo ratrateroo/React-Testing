@@ -1,11 +1,11 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import { Application } from "./components/greet/application/application";
-
-import { lang } from "./practice/lang";
-
-console.log(lang);
+import { Application } from "./components/application/Application";
+import { CounterTwo } from "./components/counter-two/CounterTwo";
+import { Counter } from "./components/counter/Counter";
+import { MuiMode } from "./components/mui/MuiMode";
+import { Skills } from "./components/skills/Skills";
+import { Users } from "./components/users/Users";
+import { AppProviders } from "./providers/AppProviders";
 
 const items = [
   {
@@ -87,9 +87,16 @@ console.log(lastTwoLanguages(lang));
 
 function App() {
   return (
-    <div className="App">
-      <Application />
-    </div>
+    <AppProviders>
+      <div className="App">
+        <Application />
+        <Skills skills={["HTML", "CSS"]} />
+        <Counter />
+        <CounterTwo count={1} />
+        <Users />
+        <MuiMode />
+      </div>
+    </AppProviders>
   );
 }
 
