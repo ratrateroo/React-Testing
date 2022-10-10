@@ -57,7 +57,7 @@ const nearestIndex = (
   }
 };
 
-export default function ScrollHighlightNabbar({ navHeader }) {
+export default function Navbar({ navHeader }) {
   const [activeIndex, setActiveIndex] = useState(0);
   useEffect(() => {
     const handleScroll = (e) => {
@@ -91,7 +91,7 @@ export default function ScrollHighlightNabbar({ navHeader }) {
   );
 }
 
-ScrollHighlightNabbar.propTypes = {
+Navbar.propTypes = {
   navHeader: PropTypes.arrayOf(
     PropTypes.shape({
       headerID: PropTypes.string,

@@ -3,10 +3,10 @@ import Navbar from "./components/Navbar";
 import "./App.css";
 
 export default function App() {
-  const section1Ref = useRef<HTMLDivElement>();
-  const section2Ref = useRef<HTMLDivElement>();
-  const section3Ref = useRef<HTMLDivElement>();
-  const section4Ref = useRef<HTMLDivElement>();
+  const section1Ref = useRef();
+  const section2Ref = useRef();
+  const section3Ref = useRef();
+  const section4Ref = useRef();
 
   const navHeader = [
     {
