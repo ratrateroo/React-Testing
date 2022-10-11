@@ -1,7 +1,9 @@
+import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
+  const [isActive, setIsActive] = useState(false);
   const accordionData = {
     title: "Section 1",
     content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
@@ -13,12 +15,12 @@ function App() {
     <React.Fragment>
       <h1>React Accordion Demo</h1>
       <div className="accordion">
-        <div className="accordion-item">
+        <div className="accordion-item" onClick={() => setIsActive(!isActive)}>
           <div className="accordion-title">
             <div>{title}</div>
-            <div>+</div>
+            <div>{isActive ? "-" : "+"}</div>
           </div>
-          <div className="accordion-content">{content}</div>
+          {isActive && <div className="accordion-content">{content}</div>}
         </div>
       </div>
     </React.Fragment>
