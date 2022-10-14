@@ -68,7 +68,9 @@ export default function Navbar({ navHeader }) {
         navHeader.length - 1
       );
       setActiveIndex(index);
+      console.log(index);
     };
+
     document.addEventListener("scroll", handleScroll);
     return () => {
       document.removeEventListener("scroll", handleScroll);
