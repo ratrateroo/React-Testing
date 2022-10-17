@@ -22,7 +22,7 @@ type FailureState<ErrorT> = {
   error: ErrorT;
 };
 
-type State<DataT, ErrorT> =
+export type State<DataT, ErrorT> =
   | IddleState<DataT>
   | LoadingState<DataT, ErrorT>
   | SucessState<DataT>
