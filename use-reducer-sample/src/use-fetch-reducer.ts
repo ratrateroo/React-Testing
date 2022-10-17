@@ -4,7 +4,7 @@ import { State } from "./state.types";
 function fetchReducer<DataT, ErrorT = string>(
   currentState: State<DataT, ErrorT>,
   action: Action<DataT, ErrorT>
-) {
+): State<DataT, ErrorT> {
   switch (action.type) {
     case "FETCH":
       return {
