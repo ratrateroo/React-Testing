@@ -1,7 +1,7 @@
 import { Action } from "./action.types";
 import { State } from "./state.types";
 
-export function useFetchReducer(initialData = null) {
+export function useFetchReducer<DataT, ErrorT = string>(initialData = null) {
   const initialState = {
     status: "idle",
     data: initialData,
