@@ -1,7 +1,9 @@
 import { Action } from "./action.types";
 import { State } from "./state.types";
 
-export function useFetchReducer<DataT, ErrorT = string>(initialData = null) {
+export function useFetchReducer<DataT, ErrorT = string>(
+  initialData: Nullable<DataT> = null
+): [State<DataT, ErrorT>, React.Dispatch<Action<DataT, ErrorT>>] {
   const initialState = {
     status: "idle",
     data: initialData,
