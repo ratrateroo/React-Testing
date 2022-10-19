@@ -1,4 +1,5 @@
 import { Action } from "./action.types";
+import { Nullable } from "./nullable.types";
 import { State } from "./state.types";
 
 export function useFetchReducer<DataT, ErrorT = string>(

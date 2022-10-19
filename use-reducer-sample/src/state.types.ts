@@ -1,3 +1,5 @@
+import { Nullable } from "./nullable.types";
+
 type IddleState<DataT> = {
   status: "idle";
   data: Nullable<DataT>;
