@@ -1,40 +1,44 @@
+import React from "react";
 import { Action } from "./action.types";
+import { Event } from "./event.type";
+import { IddleState } from "./idle.type";
 import { Nullable } from "./nullable.types";
 import { State } from "./state.types";
 
 export function useFetchReducer<DataT, ErrorT = string>(
   initialData: Nullable<DataT> = null
-): [State<DataT, ErrorT>, React.Dispatch<Action<DataT, ErrorT>>] {
-  const initialState = {
+) {
+  //: [State<DataT, ErrorT>, React.Dispatch<Action<DataT, ErrorT>>]
+  const initialState: IddleState<DataT> = {
     status: "idle",
     data: initialData,
     error: null,
   };
 
   function fetchReducer<DataT, ErrorT = string>(
-    currentState: State<DataT, ErrorT>,
-    action: Action<DataT, ErrorT>
+    state: State<DataT, ErrorT>,
+    event: Event<DataT, ErrorT>
   ): State<DataT, ErrorT> {
-    switch (action.type) {
+    switch (event.type) {
       case "FETCH":
         return {
-          ...currentState,
+          ...state,
           status: "loading",
         };
       case "RESOLVE":
         return {
           status: "success",
-          data: action.data,
+          data: event.data,
           error: null,
         };
       case "REJECT":
         return {
-          data: null,
           status: "failure",
-          error: action.error,
+          data: null,
+          error: event.error,
         };
       default:
-        return currentState;
+        return state;
     }
   }
 
