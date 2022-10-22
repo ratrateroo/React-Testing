@@ -5,7 +5,7 @@ export enum CountActionKind {
 }
 
 // An interface for our actions
-interface CountAction {
+export interface CountAction {
   type: CountActionKind;
   payload: number;
 }
